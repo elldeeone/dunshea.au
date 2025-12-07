@@ -17,7 +17,7 @@ export const SOCIALS = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/lukedunshea/",
+    href: "https://www.linkedin.com/in/luke-dunshea/",
     linkTitle: `${SITE.title} on LinkedIn`,
     icon: "linkedin",
     active: true,
@@ -37,12 +37,6 @@ export const SHARE_LINKS = [
     href: "https://x.com/intent/post?url=",
     linkTitle: `Share this post on X`,
     icon: "twitter",
-  },
-  {
-    name: "BlueSky",
-    href: "https://bsky.app/intent/compose?text=",
-    linkTitle: `Share this post on BlueSky`,
-    icon: "bluesky",
   },
   {
     name: "LinkedIn",

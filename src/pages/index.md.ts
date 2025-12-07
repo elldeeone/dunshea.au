@@ -16,7 +16,7 @@ Building with AI, one prompt at a time. Thoughts on codegen, crypto, and technol
 
 - Twitter: [@elldeeone](https://twitter.com/elldeeone)
 - GitHub: [@elldeeone](https://github.com/elldeeone)
-- LinkedIn: [lukedunshea](https://linkedin.com/in/lukedunshea)
+- LinkedIn: [luke-dunshea](https://www.linkedin.com/in/luke-dunshea/)
 
 ---
 

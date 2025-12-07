@@ -26,14 +26,14 @@ if (type === "BlogPosting") {
       name: "Luke Dunshea",
       logo: {
         "@type": "ImageObject",
-        url: "https://dunshea.au/avatar.svg",
+        url: "https://dunshea.au/avatar.jpg",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": data.url,
     },
-    image: data.ogImage || "https://dunshea.au/avatar.svg",
+    image: data.ogImage || "https://dunshea.au/avatar.jpg",
     articleSection: data.tags?.[0] || "Technology",
     keywords: data.tags?.join(", ") || "",
     wordCount: data.wordCount,
@@ -45,11 +45,11 @@ if (type === "BlogPosting") {
     "@type": "Person",
     name: "Luke Dunshea",
     url: "https://dunshea.au",
-    image: "https://dunshea.au/avatar.svg",
+    image: "https://dunshea.au/avatar.jpg",
     sameAs: [
       "https://github.com/elldeeone",
       "https://x.com/elldeeone",
-      "https://linkedin.com/in/lukedunshea",
+      "https://www.linkedin.com/in/luke-dunshea/",
     ],
     jobTitle: "Tech Consultant",
     description:

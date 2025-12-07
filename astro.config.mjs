@@ -99,7 +99,7 @@ export default defineConfig({
     react(),
     AstroPWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.ico", "avatar.svg"],
+      includeAssets: ["favicon.ico", "avatar.jpg"],
       manifest: {
         name: "Luke Dunshea",
         short_name: "dunshea",
@@ -117,15 +117,15 @@ export default defineConfig({
             type: "image/x-icon",
           },
           {
-            src: "avatar.svg",
+            src: "avatar.jpg",
             sizes: "192x192",
-            type: "image/svg+xml",
+            type: "image/jpeg",
             purpose: "any",
           },
           {
-            src: "avatar.svg",
+            src: "avatar.jpg",
             sizes: "512x512",
-            type: "image/svg+xml",
+            type: "image/jpeg",
             purpose: "any maskable",
           },
         ],
