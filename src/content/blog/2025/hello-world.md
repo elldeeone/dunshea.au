@@ -9,4 +9,4 @@ featured: true
 
 Welcome to dunshea.au.
 
-This is the beginning of something new. Stay tuned for posts about AI, codegen, crypto, and technology.
+This is the beginning of something new.
