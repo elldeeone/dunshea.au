@@ -4,13 +4,18 @@
   "description": "Building with AI, one prompt at a time. Thoughts on codegen, crypto, and technology.",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "16x16 32x32 48x48",
-      "type": "image/x-icon"
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/avatar.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
     }
   ],
   "start_url": "/",
   "display": "browser",
-  "theme_color": "#00B894",
-  "background_color": "#FAFAFA"
+  "theme_color": "#006cac",
+  "background_color": "#fdfdfd"
 }
