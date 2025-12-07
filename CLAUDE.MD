@@ -2,116 +2,70 @@
 
 This document contains important instructions and notes for Claude when working on this project.
 
+## Project Overview
+
+This is Luke Dunshea's personal website at dunshea.au, built with Astro and deployed on Vercel.
+
 ## CRITICAL GUIDELINES
 
 ### NEVER CREATE BLOG POSTS WITHOUT CONSENT
 
-- **NEVER CREATE BLOG POSTS WITHOUT EXPLICIT CONSENT** from steipete
+- **NEVER CREATE BLOG POSTS WITHOUT EXPLICIT CONSENT** from the owner
 - Do not write or propose new blog content unless specifically requested
 - Only help with editing or fixing existing posts when asked
 
 ### NEVER MERGE PULL REQUESTS
 
 - **NEVER MERGE PULL REQUESTS** - Even if explicitly asked to do so
-- Only the repository owner (steipete) should merge PRs through the GitHub web UI
+- Only the repository owner should merge PRs through the GitHub web UI
 - Create PRs as requested, but do not use `gh pr merge` or similar commands
-- Always provide the PR URL so that steipete can review and merge manually
-
-### USE GSED INSTEAD OF SED
-
-- **ALWAYS USE `gsed` INSTEAD OF `sed`** - For better compatibility across platforms
-- `gsed` provides GNU sed features that are more consistent across Linux and macOS
-- If editing files with sed-like operations, use `gsed` to ensure reliable results
-
-### ALWAYS USE LATEST DEPENDENCIES
-
-- **NEVER DOWNGRADE DEPENDENCIES** - Always use the latest stable versions
-- **ALWAYS USE TOOLING TO CHECK VERSIONS** - Never guess or assume versions
-- Run `npm outdated` to see what packages need updating
-- Run `npm view [package] version` to check the latest published version
-- When fixing dependency issues, always upgrade to the latest compatible versions
-- Prioritize staying current with the ecosystem, even if it requires more work to adapt
+- Always provide the PR URL so that the owner can review and merge manually
 
 ### IMPORTANT: Development Server Limitation
 
-- **DO NOT run `npm run dev`** in agent mode - this will create an endless loop and stop the agent from working properly
+- **DO NOT run `npm run dev`** in agent mode - this will create an endless loop
 - Instead, use `npm run build` to verify your changes
 
 ## Development Process
 
 ### Testing Changes
 
-To properly test changes, use these commands:
-
 ```bash
-# Build the project (this is preferred over npm run dev in agent mode)
+# Build the project (preferred over npm run dev in agent mode)
 npm run build
 
-# If you need to preview the build (only do when specifically requested)
+# Preview the build (only when specifically requested)
 npm run preview
 ```
 
 ### Project Structure
 
-- `/src/content/blog/` - Contains all blog posts in markdown format
-- `/src/pages/` - Contains page templates and routing
+- `/src/content/blog/` - Blog posts in markdown format
+- `/src/pages/` - Page templates and routing
 - `/src/components/` - Reusable UI components
 - `/src/layouts/` - Page layouts and templates
 - `/src/styles/` - CSS styles including Tailwind customizations
+- `/src/consts.ts` - Global site constants
 
 ### Common Tasks
 
 1. **Adding a new blog post**:
-
    - Create a new markdown file in `/src/content/blog/`
-   - Include proper frontmatter (title, description, pubDate, etc.)
-   - Format dates in ISO-8601 format: `YYYY-MM-DDTHH:MM:SS+HH:MM`
-   - Format tags as arrays: `tags: ["tag1", "tag2"]`
+   - Include proper frontmatter (title, description, pubDatetime, etc.)
+   - Use 2025+ dates for posts to appear on homepage
 
 2. **Modifying site configuration**:
-
    - Edit `/src/consts.ts` for global site constants
 
 3. **Styling changes**:
-
    - Edit files in `/src/styles/` for global styling
-   - Use Tailwind classes in component templates for component-specific styling
-
-4. **Layout changes**:
-
-   - Modify the appropriate layout files in `/src/layouts/`
-
-5. **Fixing broken images**:
-
-   - Blog posts reference images in the `/public/assets/img/` directory structure
-   - The original files can be found in `/temp-repos/steipete.com/assets/img/`
-   - Images must be copied to the matching public directory structure
-   - Fixed images should be committed to the repository
-   - Use `find` command to locate the original images
-   - Common image paths follow the pattern: `/assets/img/YEAR/POST-NAME/IMAGE.jpg`
-
-6. **Dependency Updates**:
-   - Always use proper tooling to check for latest versions:
-
-     ```bash
-     # Check all outdated dependencies
-     npm outdated
-
-     # Check latest version of a specific package
-     npm view astro version
-     npm view react version
-
-     # Update all dependencies to latest
-     npm update --latest
-     ```
-
-   - Test thoroughly after updating dependencies
-   - If a build fails after updates, diagnose the specific issue and FIX it properly
-   - NEVER resort to downgrading as a solution
+   - Use Tailwind classes in component templates
 
 ## Tech Stack
 
-- **Astro** (latest version) - Main framework
-- **TailwindCSS** - For styling
-- **React** - For interactive components (v18.2.0)
-- **MDX** - For enhanced markdown support
+- **Astro** - Main framework
+- **TailwindCSS** - Styling
+- **React** - Interactive components
+- **MDX** - Enhanced markdown support
+- **Pagefind** - Site search
+- **Vercel** - Deployment

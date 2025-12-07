@@ -13,13 +13,14 @@ const { variant = "default" } = Astro.props;
     </p>
   )}
   
+  <!-- Newsletter form disabled - set up your own newsletter service and update the action URL -->
   <form
-    action="https://buttondown.com/api/emails/embed-subscribe/steipete"
+    action="#"
     method="post"
     target="_blank"
-    class="flex flex-col sm:flex-row gap-3"
+    class="flex flex-col sm:flex-row gap-3 opacity-50 pointer-events-none"
   >
-    <input type="hidden" name="tag" value="steipete" />
+    <input type="hidden" name="tag" value="dunshea" />
     <input
       type="text"
       name="name"
